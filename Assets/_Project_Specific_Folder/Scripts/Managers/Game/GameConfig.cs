@@ -35,15 +35,17 @@ public class LevelsVariablesEditor: LevelsVariablesEditorBase
 [Serializable]
 public class TweenVariablesEditor: TweenVariablesEditorBase
 {
-
+    public float TimeToBlink = .1f;
+    public float TimeToNormal = .5f;
 
 }
 
 
 [Serializable]
-public class GamePlayVariablesEditor: GamePlayVariablesEditorBase
+public class GamePlayVariablesEditor : GamePlayVariablesEditorBase
 {
-
+    public Vector3[] CastDirection;
+    
 
 }
 

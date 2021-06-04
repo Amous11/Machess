@@ -5,6 +5,6 @@
 	Paused,
 	GamePreOver,
 	GameOver,
-	Finished,
+	Completed,
 	IsReloading
 }

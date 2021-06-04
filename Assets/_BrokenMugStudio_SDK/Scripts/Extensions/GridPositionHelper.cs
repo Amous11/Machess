@@ -6,14 +6,15 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace Hawkeen.Extentions
+namespace BrokenMugStudioSDK.Extentions
 {
 #if UNITY_EDITOR
     [ExecuteInEditMode]
-
 #endif
     public class GridPositionHelper : MonoBehaviour
     {
+#if UNITY_EDITOR
+
         [SerializeField]
         private float m_CellSize = 5;
         [Button]
@@ -28,16 +29,9 @@ namespace Hawkeen.Extentions
             }
 
         }
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
         void Update()
         {
-#if UNITY_EDITOR
             if (!Application.isPlaying)
             {
                 bool hasChanged = false;
@@ -53,7 +47,8 @@ namespace Hawkeen.Extentions
                     }
                 }
             }
-#endif
         }
+#endif
+
     }
 }

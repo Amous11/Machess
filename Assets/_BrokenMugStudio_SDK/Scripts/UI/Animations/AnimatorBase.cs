@@ -1,0 +1,105 @@
+﻿using DG.Tweening;
+using UnityEngine;
+using Sirenix.OdinInspector;
+using System.Collections.Generic;
+
+namespace BrokenMugStudioSDK
+{
+	public class AnimatorBase : MonoBehaviour
+	{
+		
+		[ReadOnly] public bool m_IsPlaying;
+		[ReadOnly] public Tween Tween;
+
+		[Space]
+
+		public bool PlayOnEnable;
+		public bool RandomStartTime = false;
+		[Range(0, 1)] public float StartTime = 0;
+
+		[Space]
+		public bool UseDotweenID = false;
+
+		[HideIf(nameof(UseDotweenID))]
+		public int Id = k_NoId;
+		protected const int k_NoId = -9999;
+		
+
+		public float Duration = 1;
+		public Ease Ease = Ease.Linear;
+		public bool IsRelative;
+
+		[Space]
+
+		public UpdateType UpdateType = UpdateType.Normal;
+		public bool UpdateFrameIndependant = false;
+
+		[Space]
+
+		public int LoopCount = 0;
+		private bool m_UsingLoops => LoopCount > 0 || LoopCount == -1;
+		[ShowIf(nameof(m_UsingLoops))]
+		public LoopType LoopType;
+
+		
+
+		protected virtual void Awake()
+		{
+			if (RandomStartTime)
+			{
+				StartTime = Random.Range(0.0f, 1.0f);
+			}
+		}
+
+		protected virtual void Start()
+		{
+			SetRestartAction();
+		}
+
+		protected virtual void SetRestartAction()
+		{
+		}
+
+		protected virtual void OnEnable()
+		{
+			GameManager.OnLevelReset += OnGameReset;
+
+			ResetValues();
+			if (PlayOnEnable)
+				StartAnimation();
+		}
+
+		protected virtual void OnDisable()
+		{
+			GameManager.OnLevelReset -= OnGameReset;
+
+			StopAnimation();
+		}
+
+		protected virtual void OnGameReset()
+        {
+			ResetValues();
+
+		}
+
+		[Button]
+		public virtual void ResetValues()
+		{
+			StopAnimation();
+		}
+
+		public virtual void StartAnimation()
+		{
+			Tween?.Kill(true);
+			m_IsPlaying = true;
+		}
+
+		public virtual void StopAnimation()
+		{
+			m_IsPlaying = false;
+			Tween?.Kill(true);
+		}
+
+		
+	}
+}

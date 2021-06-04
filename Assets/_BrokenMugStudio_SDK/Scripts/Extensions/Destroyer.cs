@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Hawkeen.Extentions
+namespace BrokenMugStudioSDK.Extentions
 {
     public class Destroyer : MonoBehaviour
     {

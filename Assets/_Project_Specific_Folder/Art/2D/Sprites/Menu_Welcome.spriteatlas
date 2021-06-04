@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Menu_Welcome
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: fdceff650964f864d9a26a6e0378f647, type: 3}
+    totalSpriteSurfaceArea: 525454
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: bdd674017bb6b4807aa77daf5310b898, type: 3}
+  - {fileID: 21300000, guid: 5bacc4e221f4dd749b45ab2dcc349b1c, type: 3}
+  - {fileID: 21300000, guid: bb686ea4c141046129a10074d93b72fd, type: 3}
+  - {fileID: 21300000, guid: ef337475efc8f47e0a137be142ee61c3, type: 3}
+  - {fileID: 21300000, guid: feef1576c4c4f1a45a861489242a6815, type: 3}
+  - {fileID: 21300000, guid: bf2300a9318115640bc6e04f98426a34, type: 3}
+  - {fileID: 21300000, guid: 49f2cdbb44655224eb28a2942f295415, type: 3}
+  - {fileID: 21300000, guid: 01a9a62cd4852a0488738b58121514ca, type: 3}
+  - {fileID: 21300000, guid: 5260a8dc67c6dc6468d6e01165e0a679, type: 3}
+  - {fileID: 21300000, guid: 60e7f61d814953f439f4386b6a201cae, type: 3}
+  - {fileID: 21300000, guid: 89bfafeec14b047a4ac5510b8751485d, type: 3}
+  - {fileID: 21300000, guid: d02ccc9fcce544362b64752ebfa2ec87, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - pass_btn_active_pass
+  - BG
+  - pause_btn_icon_setting
+  - pause_btn_blue
+  - top_btn_left 1
+  - equipicon_sample_missile
+  - top_btn_left 2
+  - btn_icon_setting
+  - lobby_menu_shop
+  - GameLogo
+  - top_btn_left
+  - lobby_chest_bar_bg
+  m_RenderDataMap: {}
+  m_Tag: Menu_Welcome
+  m_IsVariant: 0

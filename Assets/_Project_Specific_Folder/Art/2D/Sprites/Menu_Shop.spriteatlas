@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Menu_Shop
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: dd40e1bf33fb54642b60930f7a20043f, type: 3}
+    totalSpriteSurfaceArea: 2774809
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: ebc3c570e3ed54d259c4921ea1c0d45d, type: 3}
+  - {fileID: 21300000, guid: 1ffbcf81a1b5446ab98ee6e3cfce8293, type: 3}
+  - {fileID: 21300000, guid: c1149bc1568124c86a752314b78000ab, type: 3}
+  - {fileID: 21300000, guid: 60953184af88bc54d98ea7b1e74cf177, type: 3}
+  - {fileID: 21300000, guid: a4594cf46cc344df2bc8dbbdfd0847c0, type: 3}
+  - {fileID: 21300000, guid: d36072c5db7380d458fc1e1a13352b9c, type: 3}
+  - {fileID: 21300000, guid: d611d5366808ce048af301a246076c90, type: 3}
+  - {fileID: 21300000, guid: fe235427c24b77245abecee960441cb7, type: 3}
+  - {fileID: 21300000, guid: ddcf6bb79854b2d4cb09ac65ab437b0d, type: 3}
+  - {fileID: 21300000, guid: 44a9a5484ba3c4cc895dc425ccaea164, type: 3}
+  - {fileID: 21300000, guid: 28554fc966eb749e587c11db562e7eeb, type: 3}
+  - {fileID: 21300000, guid: c1507ce947d5d764494effdd12fb713f, type: 3}
+  - {fileID: 21300000, guid: 355bf13b92d5e694a88eb0fbac425ae9, type: 3}
+  - {fileID: 21300000, guid: 55b2ce7b5b5318d46ae5de7015d8310c, type: 3}
+  - {fileID: 21300000, guid: 06db9c2c1b25f2147a6b8ebdfa6d8cbc, type: 3}
+  - {fileID: 21300000, guid: 11e8ea6d5b279bd45b5c60e9fe847344, type: 3}
+  - {fileID: 21300000, guid: ccf7919d2774618459bd2e69c7571516, type: 3}
+  - {fileID: 21300000, guid: 3310003e5ac542b4e9b90133227cf272, type: 3}
+  - {fileID: 21300000, guid: da4fc89e79a8441418859b7e75eb0fb3, type: 3}
+  - {fileID: 21300000, guid: b8f8d75fb25ccf343ab90988ad11a1b6, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - shop_info_label
+  - shop_frame_large_purple
+  - shop_frame_large_green
+  - btn_icon_cloth
+  - shop_frame_blue
+  - btn_icon_confirm
+  - ShopBg
+  - btn_icon_lock
+  - btn_icon_energy
+  - shop_frame_purple
+  - shop_frame_yellow
+  - btn_icon_armor
+  - btn_icon_bookmark
+  - btn_icon_gun
+  - btn_icon_arrow_up
+  - btn_icon_store
+  - shop_frame_BW
+  - stage_btn_icon_lock
+  - btn_icon_mask
+  - btn_icon_check
+  m_RenderDataMap: {}
+  m_Tag: Menu_Shop
+  m_IsVariant: 0

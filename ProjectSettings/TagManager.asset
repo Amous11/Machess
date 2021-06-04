@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tile
-  - Piece
+  - Ground
+  - Enemy
+  - Wall
+  - PowerUp
+  - Out
   layers:
   - Default
   - TransparentFX
@@ -15,10 +19,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Projectile
+  - Ground
+  - Character
+  - PowerUp
   - 
   - 
   - 

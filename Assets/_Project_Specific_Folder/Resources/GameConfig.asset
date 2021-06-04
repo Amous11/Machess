@@ -1,0 +1,130 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fdb9bef7a3dfd47ad55ed56841a932, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  Debug:
+    IsDebugMode: 0
+  Input:
+    DragSensitivity: {x: 1, y: 1}
+    InputThreshold: 0.1
+  GamePlay:
+    LevelCompleteMoneyReward: 90
+    BonusPerKillMoney: 10
+  Levels:
+    PreloadAssets: []
+    Levels: []
+  HUD:
+    CoinUIAnimData:
+      AmountCoins: 7
+      DelayBetweenCoins: 0.18
+      AnimData:
+        InitialSizeDeltaAmount: 185
+        InitialSizeDeltaDuration: 0.08
+        InitialSizeDeltaEase: 3
+        MoveOffset: {x: 0, y: 241, z: 0}
+        MoveDuration: 0.2
+        MoveEase: 3
+        FinalSizeDeltaAmount: 138.75
+        FinalSizeDeltaDuration: 0.17
+        FinalSizeDeltaEase: 3
+        FinalAnimData:
+          Duration: 0.15
+          Ease: 2
+          LoopCount: 0
+    HideLevelCompleteDelay: 0.5
+    ShowLevelCompleteDelay: 1
+    ShowLevelFailedDelay: 1
+  Camera:
+    CameraMouvements:
+      MouvementSpeed: 5
+      MouvementSpeedVectorMultiply: {x: 1, y: 1, z: 1}
+      DoLookAt: 0
+      LookAtOffset: {x: 0, y: 0, z: 0}
+      LookAtSpeed: 10
+      DoRotateWithTarget: 0
+      RotateWithTargetSpeed: 10
+    ZoomData:
+      ZoomSpeedIn: 2
+      ZoomSpeedOut: 5
+      MinZoom: -11.27
+      MaxZoom: -10
+    CameraPositions:
+      CameraPositions:
+      - GameState: 0
+        RotatorRotation: {x: 14, y: -222.42, z: 0}
+        HandPosition: {x: 0, y: 0, z: -4.7}
+        Delay: 0
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 1
+        RotatorRotation: {x: 45, y: 0, z: 1}
+        HandPosition: {x: 0, y: 0, z: -13}
+        Delay: 0.2
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 5
+        RotatorRotation: {x: 45, y: 180, z: 1}
+        HandPosition: {x: 0, y: 0, z: -5}
+        Delay: 0.2
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 2
+        RotatorRotation: {x: 28, y: 180, z: 0}
+        HandPosition: {x: 0, y: -2, z: 1}
+        Delay: 0
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 3
+        RotatorRotation: {x: 28, y: 180, z: 0}
+        HandPosition: {x: 0, y: 0, z: 0}
+        Delay: 0.3
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 4
+        RotatorRotation: {x: 28, y: 180, z: 0}
+        HandPosition: {x: 0, y: -2, z: 1}
+        Delay: 0.3
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 6
+        RotatorRotation: {x: 0, y: 0, z: 0}
+        HandPosition: {x: 0, y: 0, z: 0}
+        Delay: 0.3
+        Durration: 0.5
+        EaseType: 3
+  Menus:
+    TimeToShowNoThanks: 1
+  Shop:
+    ShopItemsLists:
+      ItemLists:
+        keyData: 00000000010000000200000003000000
+        valueData:
+        - {fileID: 11400000, guid: b24ce7238547bdd4299c75a709784b73, type: 2}
+        - {fileID: 11400000, guid: 1cdd9e1774981db4aab80e9064c7fff5, type: 2}
+        - {fileID: 11400000, guid: 3c363e75101dac14e854d863a0eac405, type: 2}
+        - {fileID: 11400000, guid: ca1ae149e10ae7146821cde158960f5d, type: 2}
+    RarityColors:
+      keyData: 00000000010000000200000003000000
+      valueData:
+      - BackgroundColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+        TextColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+        SelectedTeint: {r: 1, g: 1, b: 1, a: 1}
+      - BackgroundColor: {r: 0.6770819, g: 0.6650944, b: 1, a: 1}
+        TextColor: {r: 0.14905654, g: 0.11792451, b: 1, a: 1}
+        SelectedTeint: {r: 1, g: 1, b: 1, a: 1}
+      - BackgroundColor: {r: 0.7805217, g: 0.504717, b: 1, a: 1}
+        TextColor: {r: 0.9037957, g: 0, b: 1, a: 1}
+        SelectedTeint: {r: 1, g: 1, b: 1, a: 1}
+      - BackgroundColor: {r: 1, g: 0.88645947, b: 0.5613208, a: 1}
+        TextColor: {r: 0.91115713, g: 1, b: 0, a: 1}
+        SelectedTeint: {r: 1, g: 0.8160377, b: 0.8160377, a: 1}

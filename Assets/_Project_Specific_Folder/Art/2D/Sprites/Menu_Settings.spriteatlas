@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Menu_Settings
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: a24c58de05a68084db949dc9920f2eff, type: 3}
+    totalSpriteSurfaceArea: 209575
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: eb3db5b0868bc4f348e3d3a1dfbf32a8, type: 3}
+  - {fileID: 21300000, guid: eb165af05aa2e4ab2bcad217611774b8, type: 3}
+  - {fileID: 21300000, guid: 4e9baab14e03b4b1c9219bb1a838f001, type: 3}
+  - {fileID: 21300000, guid: a1e436d26683241d787e58854a040e63, type: 3}
+  - {fileID: 21300000, guid: f6291ac32d4e54875a041965865c030b, type: 3}
+  - {fileID: 21300000, guid: c426b035919094016adb99e1349aa315, type: 3}
+  - {fileID: 21300000, guid: 78757b0623f3b4309b7cc69c4769ae37, type: 3}
+  - {fileID: 21300000, guid: 228b09b7fa1c5455eab8432a85fac4ee, type: 3}
+  - {fileID: 21300000, guid: f6de2a7823f2e4282b6a118ee77c977e, type: 3}
+  - {fileID: 21300000, guid: 852e8aa9257ad44d3914c67e159ae8b2, type: 3}
+  - {fileID: 21300000, guid: 0363d21a84dc6491e831bae874edc6ad, type: 3}
+  - {fileID: 21300000, guid: 6124341aca5a24f1c8ffa878bf205e93, type: 3}
+  - {fileID: 21300000, guid: d1b1739b99fa046a78d969b1957e55bb, type: 3}
+  - {fileID: 21300000, guid: b1f42bbbfffc44202b66381ab8b622ee, type: 3}
+  - {fileID: 21300000, guid: 901d64fc6ad9d44799c2ad0fd4f182d2, type: 3}
+  - {fileID: 21300000, guid: 84378f2fe082ff44cbda08bad4c36d8e, type: 3}
+  - {fileID: 21300000, guid: bdcbe28f1d35041b091b566b1f0f7bce, type: 3}
+  - {fileID: 21300000, guid: aa6a848fa27124e199c5fbc6d6dbc0b4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - popup_bg
+  - setting_icon_music_on
+  - popup_btn_close
+  - switch_off_bg
+  - slider_frame 1
+  - switch_on
+  - setting_icon_sound_off
+  - popup_title_line
+  - setting_icon_haptic
+  - setting_line
+  - switch_on_bg
+  - slider_control
+  - switch_off
+  - setting_icon_music_off
+  - setting_icon_sound_on
+  - setting_icon_haptic_OFF
+  - setting_icon_bell
+  - slider_frame
+  m_RenderDataMap: {}
+  m_Tag: Menu_Settings
+  m_IsVariant: 0

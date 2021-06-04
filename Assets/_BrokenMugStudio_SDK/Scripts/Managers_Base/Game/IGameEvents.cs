@@ -1,7 +1,6 @@
 ﻿public interface IGameEvents
 {
-    void GameReset();
-    void LevelReset();
+    
     void LevelLoaded();
     void LevelStarted();
     void PauseGame();

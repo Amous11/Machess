@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Menu_Completed
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4993288884820b048956c835c45f812f, type: 3}
+    totalSpriteSurfaceArea: 755386
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 51bc7f9398cc24aff81f13855411d2d4, type: 3}
+  - {fileID: 21300000, guid: 105f75e375d18b044b17e7d74678066c, type: 3}
+  - {fileID: 21300000, guid: e315c9f31d19296448cf004086dec781, type: 3}
+  - {fileID: 21300000, guid: af96c8555362c4b7fba005304d49b573, type: 3}
+  - {fileID: 21300000, guid: c0947046604294781a54818d5efaa1ea, type: 3}
+  - {fileID: 21300000, guid: db747f66b619c174cade612029757b4c, type: 3}
+  - {fileID: 21300000, guid: 4f004328d7c9547edae34787869f3e8a, type: 3}
+  - {fileID: 21300000, guid: a4771f2cf68494470ab5d3d0bb83abad, type: 3}
+  - {fileID: 21300000, guid: e139adcc5fb0f42019b1d6c4c92e7b63, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - text_deco_line_right
+  - YouWin
+  - common_icon_trophy _Failed
+  - text_deco_line_left
+  - reward_menu_bg_focus
+  - Bg_Gradiant_Complete
+  - ribbon_bg_green
+  - reward_menu_bg
+  - common_icon_trophy
+  m_RenderDataMap: {}
+  m_Tag: Menu_Completed
+  m_IsVariant: 0

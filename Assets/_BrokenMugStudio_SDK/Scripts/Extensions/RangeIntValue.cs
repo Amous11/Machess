@@ -2,7 +2,7 @@
 using System.Collections;
 using Sirenix.OdinInspector;
 
-namespace Hawkeen.Extentions
+namespace BrokenMugStudioSDK.Extentions
 {
     [System.Serializable]
     public class RangeIntValue

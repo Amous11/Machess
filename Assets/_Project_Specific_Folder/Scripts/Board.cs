@@ -8,11 +8,11 @@ public class Board : MonoBehaviour
     [SerializeField]
     private Board_Tile[] m_BoardTiles;
 
-    public Board_Tile GetTileByCoordonate(Vector2 i_Coordonate)
+    public Board_Tile GetTileByCoordonate(Vector2 i_Coordinate)
     {
         for (int i = 0; i < m_BoardTiles.Length; i++)
         {
-            if(m_BoardTiles[i].Cordinates==i_Coordonate)
+            if(m_BoardTiles[i].Coordinates==i_Coordinate)
             {
                 return m_BoardTiles[i];
             }
@@ -29,6 +29,7 @@ public class Board : MonoBehaviour
         for(int i=0;i< m_BoardTiles.Length;i++)
         {
             m_BoardTiles[i].EditorEnit(this);
+            m_BoardTiles[i].gameObject.tag = eTags.Tile.ToString();
         }
     }
 #endif

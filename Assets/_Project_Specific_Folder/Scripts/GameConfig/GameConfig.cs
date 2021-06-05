@@ -53,9 +53,25 @@ namespace BrokenMugStudioSDK
     public class GamePlayVariablesEditor : GamePlayVariablesEditorBase
     {
         public int BonusPerKillMoney = 10;
+        public PieceData[] PieceSettings;
+        public PieceData GetPieceData(ePieceTypes i_Type)
+        {
+            for(int i=0;i< PieceSettings.Length;i++)
+            {
+                if(PieceSettings[i].Type== i_Type)
+                {
+                    return PieceSettings[i];
+                }
+            }
+            return null;
+        }
     }
-
-   
+    [Serializable]
+    public class PieceData
+    {
+        public ePieceTypes Type;
+        public Vector3Int[] Moves;
+    }
     [Serializable]
     public class HUDVariablesEditor : HUDVariablesEditorBase
     {

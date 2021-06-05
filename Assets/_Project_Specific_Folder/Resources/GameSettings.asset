@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   General:
-    GameName: GameName
+    GameName: Machess
     BuildVersion: 0.1
     BuildNumber: 100
-    BundleIdentifier: com.BrokenMugStudio.GameName
+    BundleIdentifier: com.BrokenMugStudio.Machess
     DefaultIcon: {fileID: 21300000, guid: 081f76887d6c43344a82f989e954dc26, type: 3}
     GameIcon: {fileID: 0}
-    GooglePlayId: 
+    GooglePlayId: com.BrokenMugStudio.Machess
   Screenshots:
     ShowLogOnCreation: 1
     OpenOnFinish: 1
@@ -38,8 +38,8 @@ MonoBehaviour:
     KeyaliasPass: BMS!123
   AdSettings:
     MaxSdkKey: 9R5sR2pTfai196fIM_t0Tw4KlWHT2Xh4pURpiCWWr8TO5h4r5WyJfpfpuUSf9MUr72TK48N-AAp-WvuxWVdbO6
-    EnableAds: 1
-    EnableInterstitials: 1
+    EnableAds: 0
+    EnableInterstitials: 0
     InterstitialAdUnitId: cb0ff6e3f8b886df
     InterestialsMaxRetry: 2
     ShowInterestialsOnLevelFailed: 1
@@ -47,7 +47,7 @@ MonoBehaviour:
     InterestialDelayType: 0
     TimeInterval: 60
     LevelInterval: 2
-    EnableRewardedAd: 1
+    EnableRewardedAd: 0
     RewardedAdUnitId: 5a3f677156fecfcf
     RewardedAdMaxRetry: 10
     EnableBannerAd: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
     EnableAdjust: 0
     AdjustToken: YOUR_ANDROID_APP_TOKEN_HERE
     LogFacebookEvents: 0
-    LogGameAnalyticsEvents: 1
+    LogGameAnalyticsEvents: 0
   DefineSymbols:
     UseAddressables: 0
     UseAdjust: 0

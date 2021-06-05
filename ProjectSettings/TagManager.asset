@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - PowerUp
   - Out
+  - Piece
   layers:
   - Default
   - TransparentFX

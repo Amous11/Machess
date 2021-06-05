@@ -6,5 +6,6 @@ public enum eTags
     Ground,
     Tile,
     PowerUp,
-    Out
+    Out,
+    Piece
 }

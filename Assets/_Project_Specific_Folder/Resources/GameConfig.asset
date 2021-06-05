@@ -13,15 +13,37 @@ MonoBehaviour:
   m_Name: GameConfig
   m_EditorClassIdentifier: 
   Debug:
-    IsDebugMode: 0
+    m_EnableDebug: 1
   Input:
     DragSensitivity: {x: 1, y: 1}
     InputThreshold: 0.1
   GamePlay:
     LevelCompleteMoneyReward: 90
     BonusPerKillMoney: 10
+    PieceSettings:
+    - Type: 0
+      Moves:
+      - {x: 1, y: 0, z: 0}
+      - {x: -1, y: 0, z: 0}
+      - {x: 0, y: 0, z: 1}
+      - {x: 0, y: 0, z: -1}
+    - Type: 1
+      Moves:
+      - {x: 1, y: 0, z: 0}
+      - {x: -1, y: 0, z: 0}
+      - {x: 0, y: 0, z: 1}
+      - {x: 0, y: 0, z: -1}
+      - {x: 1, y: 0, z: 1}
+      - {x: -1, y: 0, z: -1}
+      - {x: -1, y: 0, z: 1}
+      - {x: 1, y: 0, z: -1}
+    - Type: 2
+      Moves:
+      - {x: 1, y: 0, z: 1}
+      - {x: -1, y: 0, z: -1}
+      - {x: -1, y: 0, z: 1}
+      - {x: 1, y: 0, z: -1}
   Levels:
-    PreloadAssets: []
     Levels: []
   HUD:
     CoinUIAnimData:
@@ -44,6 +66,18 @@ MonoBehaviour:
     HideLevelCompleteDelay: 0.5
     ShowLevelCompleteDelay: 1
     ShowLevelFailedDelay: 1
+    MainButtonJuice:
+      DownDurration: 0.25
+      ScaleDown: 0.85
+      DownEase: 23
+      DoVibrateDown: 1
+      UpShakeDurration: 0.25
+      UpResetDurration: 0.1
+      Strength: 0.5
+      Vibro: 2
+      Elasticity: 0.1
+      DoVibrateUp: 0
+      UpEase: 25
   Camera:
     CameraMouvements:
       MouvementSpeed: 5

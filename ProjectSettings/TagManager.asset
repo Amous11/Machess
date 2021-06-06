@@ -18,10 +18,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Board
+  - Dice
   - Projectile
-  - Ground
+  - BoardTile
   - Character
   - PowerUp
   - 

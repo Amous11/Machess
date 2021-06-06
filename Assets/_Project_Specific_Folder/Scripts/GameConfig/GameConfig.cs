@@ -53,6 +53,7 @@ namespace BrokenMugStudioSDK
     public class GamePlayVariablesEditor : GamePlayVariablesEditorBase
     {
         public int BonusPerKillMoney = 10;
+        public DiceSettings DiceSettings;
         public PieceData[] PieceSettings;
         public PieceData GetPieceData(ePieceTypes i_Type)
         {
@@ -71,6 +72,12 @@ namespace BrokenMugStudioSDK
     {
         public ePieceTypes Type;
         public Vector3Int[] Moves;
+    }
+    [Serializable]
+    public class DiceSettings
+    {
+        public float ThrowVelocity=5;
+        public float ThrowAngularVelocity = 20;
     }
     [Serializable]
     public class HUDVariablesEditor : HUDVariablesEditorBase

@@ -43,6 +43,8 @@ public class Piece : MonoBehaviour
             Debug.Log("Move >TargetPositionIsValid X");
             CurrentTile = i_TilePosition;
             transform.DOMove(i_TilePosition.transform.position, .5f);
+            m_Board.SelectionChanged();
+
         }
     }
     public bool TargetPositionIsValid(Tile i_TilePosition, int i_Range)
@@ -53,7 +55,8 @@ public class Piece : MonoBehaviour
     public void Selected(int i_Range)
     {
         Debug.Log("Se");
-
+        m_Board.SelectionChanged();
+        //deedede
         m_PossibleMoves = new List<Vector3Int>();
         for (int i=0; i<m_Settings.Moves.Length; i++)
         {
@@ -62,10 +65,13 @@ public class Piece : MonoBehaviour
                 if(m_Board.GetPositionTile(CurrentTile.Position + (m_Settings.Moves[i] * j)) != null)
                 {
                     m_PossibleMoves.Add(CurrentTile.Position + (m_Settings.Moves[i] * j));
+                    m_Board.GetPositionTile(CurrentTile.Position + (m_Settings.Moves[i] * j)).HighlightTile(true);
                 }
             }
         }
     }
+
+
 
     
 }

@@ -101,7 +101,7 @@ MonoBehaviour:
         Durration: 0.5
         EaseType: 3
       - GameState: 1
-        RotatorRotation: {x: 45, y: 0, z: 1}
+        RotatorRotation: {x: 67.5, y: 0, z: 1}
         HandPosition: {x: 0, y: 0, z: -13}
         Delay: 0.2
         Durration: 0.5

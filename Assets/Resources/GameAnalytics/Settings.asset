@@ -25,24 +25,28 @@ MonoBehaviour:
   UserMessagesSubmitted: 0
   UserMessagesFailed: 0
   CustomArea: 
-  gameKey:
-  - 2b3b41d9dfbbaf6096379fd2a7663a4c
-  secretKey:
-  - 7f9b91c1e44480eb1a18c1de54ee66677d2e5f33
-  Build:
-  - 0.1
-  SelectedPlatformOrganization:
-  - Broken Mug Studio
-  SelectedPlatformStudio:
-  - Broken Mug Studio
-  SelectedPlatformGame:
-  - Rocket Battleground
-  SelectedPlatformGameID: d8230200
-  SelectedOrganization: 01000000
-  SelectedStudio: 01000000
-  SelectedGame: 01000000
-  NewVersion: 
-  Changes: 
+  gameKey: []
+  secretKey: []
+  Build: []
+  SelectedPlatformOrganization: []
+  SelectedPlatformStudio: []
+  SelectedPlatformGame: []
+  SelectedPlatformGameID: 
+  SelectedOrganization: 
+  SelectedStudio: 
+  SelectedGame: 
+  NewVersion: 6.5.4
+  Changes: '6.5.4
+
+    - fixed typo error
+
+
+    6.5.3
+
+    - added support for max
+    in impression events
+
+    - fixed dupplicate symbol on ios'
   SignUpOpen: 0
   StudioName: BrokenMugStudio
   GameName: GameName
@@ -63,8 +67,8 @@ MonoBehaviour:
   ResourceItemTypes: []
   ResourceCurrencies: []
   LastCreatedGamePlatform: -1
-  Platforms: 0b000000
-  CurrentInspectorState: 1
+  Platforms: 
+  CurrentInspectorState: 3
   ClosedHints: 
   DisplayHints: 0
   DisplayHintsScrollState: {x: 0, y: 0}
@@ -90,7 +94,7 @@ MonoBehaviour:
   IncludeGooglePlay: 1
   FpsCriticalThreshold: 20
   FpsCirticalSubmitInterval: 1
-  PlatformFoldOut: 01
+  PlatformFoldOut: 
   CustomDimensions01FoldOut: 0
   CustomDimensions02FoldOut: 0
   CustomDimensions03FoldOut: 0

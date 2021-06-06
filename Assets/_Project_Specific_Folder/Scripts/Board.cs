@@ -15,6 +15,13 @@ public class Board : MonoBehaviour
         }
         return null;
     }
+    public void SelectionChanged()
+    {
+        for (int i = 0; i < m_Rows.Length; i++)
+        {
+            m_Rows[i].SelectionChanged();
+        }
+    }
 #if UNITY_EDITOR
     [Button]
     public void SetRefrences()

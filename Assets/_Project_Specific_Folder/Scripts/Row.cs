@@ -16,7 +16,13 @@ public class Row : MonoBehaviour
         }
         return null;
     }
-
+    public void SelectionChanged()
+    {
+        for (int i = 0; i < m_Tiles.Length; i++)
+        {
+            m_Tiles[i].HighlightTile(false);
+        }
+    }
 #if UNITY_EDITOR
     [Button]
     public void SetRefrences()
@@ -29,5 +35,7 @@ public class Row : MonoBehaviour
     }
 
     
+
+
 #endif
 }

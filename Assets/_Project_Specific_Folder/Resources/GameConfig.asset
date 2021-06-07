@@ -20,6 +20,9 @@ MonoBehaviour:
   GamePlay:
     LevelCompleteMoneyReward: 90
     BonusPerKillMoney: 10
+    DiceSettings:
+      ThrowVelocity: 100
+      ThrowAngularVelocity: 100
     PieceSettings:
     - Type: 0
       Moves:
@@ -101,14 +104,14 @@ MonoBehaviour:
         Durration: 0.5
         EaseType: 3
       - GameState: 1
-        RotatorRotation: {x: 67.5, y: 0, z: 1}
-        HandPosition: {x: 0, y: 0, z: -13}
+        RotatorRotation: {x: 67.5, y: 0, z: 0}
+        HandPosition: {x: 0, y: 0, z: -15}
         Delay: 0.2
         Durration: 0.5
         EaseType: 3
       - GameState: 5
         RotatorRotation: {x: 45, y: 180, z: 1}
-        HandPosition: {x: 0, y: 0, z: -5}
+        HandPosition: {x: 0, y: 0, z: -7.5}
         Delay: 0.2
         Durration: 0.5
         EaseType: 3

@@ -1033,7 +1033,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3589032519420595106, guid: b39730b3af01aaf4ebfd12e2ed1fd2be, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3627120801353892076, guid: b39730b3af01aaf4ebfd12e2ed1fd2be, type: 3}
       propertyPath: m_Pivot.x
@@ -1613,13 +1613,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7188924318045584519}
     m_Modifications:
+    - target: {fileID: 1903933598212008330, guid: aca06bbcd53e2a64e953f73b27d8c5a7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -101.63013
+      objectReference: {fileID: 0}
     - target: {fileID: 7993052515753658352, guid: aca06bbcd53e2a64e953f73b27d8c5a7, type: 3}
       propertyPath: m_Name
       value: Screen_In_Game
-      objectReference: {fileID: 0}
-    - target: {fileID: 7993052515753658352, guid: aca06bbcd53e2a64e953f73b27d8c5a7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7993052515753658353, guid: aca06bbcd53e2a64e953f73b27d8c5a7, type: 3}
       propertyPath: m_Pivot.x
@@ -1705,10 +1705,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7993052515753658358, guid: aca06bbcd53e2a64e953f73b27d8c5a7, type: 3}
-      propertyPath: m_UICamera
-      value: 
-      objectReference: {fileID: 5514241606514938529}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aca06bbcd53e2a64e953f73b27d8c5a7, type: 3}
 --- !u!114 &2904395955668523238 stripped
@@ -1942,6 +1938,18 @@ PrefabInstance:
     - target: {fileID: 438213580499424277, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379174670593925297, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197398234399447254, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493558600612495328, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}

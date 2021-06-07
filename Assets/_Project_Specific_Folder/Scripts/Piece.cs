@@ -24,7 +24,6 @@ public class Piece : MonoBehaviour
     public void SetCurrentTile()
     {
         RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position+Vector3.up, Vector3.down, out hit, 20, m_TileLayer))
         {
             if ((hit.collider.gameObject.CompareTag(eTags.Tile.ToString())))
@@ -43,7 +42,7 @@ public class Piece : MonoBehaviour
             Debug.Log("Move >TargetPositionIsValid X");
             CurrentTile = i_TilePosition;
             transform.DOMove(i_TilePosition.transform.position, .5f);
-            m_Board.SelectionChanged();
+            m_Board.SelectionChanged(); //highlights tiles
 
         }
     }
@@ -56,7 +55,7 @@ public class Piece : MonoBehaviour
     {
         Debug.Log("Se");
         m_Board.SelectionChanged();
-        //deedede
+
         m_PossibleMoves = new List<Vector3Int>();
         for (int i=0; i<m_Settings.Moves.Length; i++)
         {
@@ -68,6 +67,19 @@ public class Piece : MonoBehaviour
                     m_Board.GetPositionTile(CurrentTile.Position + (m_Settings.Moves[i] * j)).HighlightTile(true);
                 }
             }
+        }
+    }
+
+    public int CalculateUsedActionPoints(Tile i_InitialTile, Tile i_ClickedTile)
+    {
+        Vector3 vector = i_ClickedTile.Position - i_InitialTile.Position;
+        if ((Mathf.Abs(vector.x) >= (Mathf.Abs(vector.z))))
+        {
+            return (int)vector.x;
+        }
+        else
+        {
+            return (int)vector.z;
         }
     }
 }

@@ -7,11 +7,13 @@ namespace BrokenMugStudioSDK
 {
     public class GameManager : GameManagerBase
     {
+        public static event LevelEvent OnDiceRoll = delegate { };
+
         private GameObject m_CurrentLevelInstance;
         [ReadOnly]
         public Level CurrentLevel;
 
-        public int PlayerKillCount { get; internal set; }
+        public int CurrentPlayerIndex;
 
         protected override void OnAwakeEvent()
         {
@@ -55,7 +57,7 @@ namespace BrokenMugStudioSDK
         public override void LevelStarted()
         {
             base.LevelStarted();
-
+            MenuManager.Instance.GetInGameScreen().UpdateActionPoints(0);
         }
 
         public void LevelInstanciated(Level i_Level)
@@ -84,6 +86,13 @@ namespace BrokenMugStudioSDK
         {
             base.LevelFailed();
 
+        }
+        public void RollDice()
+        {
+            if(OnDiceRoll!=null)
+            {
+                OnDiceRoll?.Invoke();
+            }
         }
 
         

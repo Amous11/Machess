@@ -70,6 +70,11 @@ namespace BrokenMugStudioSDK
             DOVirtual.DelayedCall(GameConfig.Instance.HUD.ShowLevelFailedDelay, () => { OpenMenuScreen(eMenuScreens.Screen_LevelFailedRevive.ToString()); });
 
         }
+        public Screen_InGame GetInGameScreen()
+        {
+            return MenuScreensRefs.MenuScreenList[eMenuScreens.Screen_InGame.ToString()].gameObject.GetComponent<Screen_InGame>();
+
+        }
     }
 }
 

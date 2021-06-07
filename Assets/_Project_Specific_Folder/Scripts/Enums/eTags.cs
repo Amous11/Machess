@@ -5,7 +5,5 @@ public enum eTags
     Enemy,
     Ground,
     Tile,
-    PowerUp,
-    Out,
     Piece
 }

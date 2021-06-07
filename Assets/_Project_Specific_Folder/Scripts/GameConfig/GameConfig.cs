@@ -52,6 +52,8 @@ namespace BrokenMugStudioSDK
     [Serializable]
     public class GamePlayVariablesEditor : GamePlayVariablesEditorBase
     {
+        public int ActionPointsCap = 9;
+
         public int BonusPerKillMoney = 10;
         public DiceSettings DiceSettings;
         public PieceData[] PieceSettings;
@@ -76,9 +78,10 @@ namespace BrokenMugStudioSDK
     [Serializable]
     public class DiceSettings
     {
-        public float ThrowVelocity=5;
-        public float ThrowAngularVelocity = 20;
+        public float ThrowVelocity = 100;
+        public float ThrowAngularVelocity = 100;
     }
+
     [Serializable]
     public class HUDVariablesEditor : HUDVariablesEditorBase
     {

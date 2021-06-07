@@ -2,5 +2,6 @@ public enum ePieceTypes
 {
    Rook,
    Queen,
-   Fool
+   Fool,
+   Payload
 }

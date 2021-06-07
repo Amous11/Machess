@@ -4,8 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dice : MonoBehaviour
+public class Dice : Singleton<Dice>
 {
+    public delegate void DiceEvent(int Result);
+    public static event DiceEvent OnDiceStopped = delegate {};
     [SerializeField]
     private Transform m_ThrowPosition;
     [SerializeField]
@@ -22,6 +24,7 @@ public class Dice : MonoBehaviour
         m_IsThrown = true;
         m_Rigidbody.position = m_ThrowPosition.position;
         m_Rigidbody.angularVelocity = GetRandomVector() * m_DiceSettings.ThrowAngularVelocity;
+        m_Rigidbody.AddForce(m_Rigidbody.angularVelocity);
     }
 
     private void FixedUpdate()
@@ -38,7 +41,11 @@ public class Dice : MonoBehaviour
     {
         m_IsThrown = false;
         m_Rigidbody.angularVelocity = Vector3.zero;
+
         Debug.Log("DiceValue" + GetValue());
+        OnDiceStopped?.Invoke(GetValue());
+
+        gameObject.SetActive(false);
     }
     public int GetValue()
     {

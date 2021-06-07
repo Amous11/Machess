@@ -25,7 +25,7 @@ public class Screen_LevelCompleted : MenuScreenBase
         m_NoThanksButton.gameObject.SetActive(false);
         DOVirtual.DelayedCall(m_MenuVars.TimeToShowNoThanks, () => { m_NoThanksButton.gameObject.SetActive(true); });
         m_CanClickButtons = true;
-        m_MoneyToReceive = (GameConfig.Instance.GamePlay.LevelCompleteMoneyReward* m_MoneyRewardMultiplier)+(GameManager.Instance.PlayerKillCount*GameConfig.Instance.GamePlay.BonusPerKillMoney);
+        m_MoneyToReceive = (GameConfig.Instance.GamePlay.LevelCompleteMoneyReward* m_MoneyRewardMultiplier);
         m_CoinGroup.SetMoney(m_MoneyToReceive, false);
         m_DoubleRvButton.onClick.AddListener(onDoubleRvClick);
         m_NoThanksButton.onClick.AddListener(onNoThanksClick);

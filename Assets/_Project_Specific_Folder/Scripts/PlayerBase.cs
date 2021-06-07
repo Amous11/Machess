@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class PlayerBase : MonoBehaviour
 {
+    public bool IsMyTurn { get { return PlayerIndex == GameManager.Instance.CurrentPlayerIndex; } }
     public int PlayerIndex;
     [SerializeField]
     private Piece[] m_Pieces;
@@ -24,8 +25,12 @@ public class PlayerBase : MonoBehaviour
     }
     public void RollDice()
     {
-        Dice.OnDiceStopped += DiceRolled;
-        Dice.Instance.ThrowDice();
+        if(IsMyTurn)
+        {
+            Dice.OnDiceStopped += DiceRolled;
+            Dice.Instance.ThrowDice();
+        }
+       
     }
 
     private void DiceRolled(int Result)
@@ -43,8 +48,24 @@ public class PlayerBase : MonoBehaviour
     public void SelectPiece(Piece i_SelectedPiece)
     {
         Debug.Log("Select");
-        m_SelectedPiece = i_SelectedPiece;
-        m_SelectedPiece.Selected(m_Range);
+
+        for (int i = 0; i < m_Pieces.Length; i++)
+        {
+            if (i_SelectedPiece == m_Pieces[i])
+            {
+                m_SelectedPiece = i_SelectedPiece;
+                m_SelectedPiece.Selected(m_Range);
+                return;
+            }
+            
+        }
+
+        if ((null != m_SelectedPiece) && (m_SelectedPiece.TargetPositionIsValid(i_SelectedPiece.CurrentTile, m_Range)))
+        {
+            MovePiece(i_SelectedPiece.CurrentTile);
+            Destroy(i_SelectedPiece.gameObject);
+        }
+        
     }
 
     public void MovePiece(Tile i_TargetPostion)
@@ -57,7 +78,6 @@ public class PlayerBase : MonoBehaviour
         int usedPoints = Mathf.Abs(m_SelectedPiece.CalculateUsedActionPoints(m_SelectedPiece.CurrentTile, i_TargetPostion));
         SetActionPoints(-usedPoints);
         m_SelectedPiece.Move(i_TargetPostion, m_Range);
-       //m_SelectedPiece = null;
         SelectPiece(m_SelectedPiece);
     }
 

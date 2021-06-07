@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : PlayerBase
+public class Player : PlayerBase
 {
     private Camera m_Camera { get { return CameraBehaviour.Instance.MainCamera; } }
     [SerializeField]
@@ -25,7 +25,10 @@ public class PlayerController : PlayerBase
         
     private void onPointerDown()
     {
-        Raycast();
+        if(IsMyTurn)
+        {
+            Raycast();
+        }
     }
     private void onPointerUp()
     {
@@ -39,7 +42,7 @@ public class PlayerController : PlayerBase
       
         if (Physics.Raycast(ray, out hit,Mathf.Infinity, m_Layer))
         {
-            Debug.DrawRay(m_Camera.transform.position, ray.direction*hit.distance, Color.red);
+            Debug.DrawRay(m_Camera.transform.position, ray.direction * hit.distance, Color.red);
 
             if((hit.collider.gameObject.CompareTag(eTags.Tile.ToString())))
             { 

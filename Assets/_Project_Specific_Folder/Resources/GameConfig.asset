@@ -19,6 +19,7 @@ MonoBehaviour:
     InputThreshold: 0.1
   GamePlay:
     LevelCompleteMoneyReward: 90
+    ActionPointsCap: 9
     BonusPerKillMoney: 10
     DiceSettings:
       ThrowVelocity: 100
@@ -105,7 +106,7 @@ MonoBehaviour:
         EaseType: 3
       - GameState: 1
         RotatorRotation: {x: 67.5, y: 0, z: 0}
-        HandPosition: {x: 0, y: 0, z: -15}
+        HandPosition: {x: 0, y: 0, z: -20}
         Delay: 0.2
         Durration: 0.5
         EaseType: 3

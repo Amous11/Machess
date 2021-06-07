@@ -10,6 +10,8 @@ public class Screen_InGame : MenuScreenBase
     [SerializeField]
     private Button m_RollDiceButton;
     [SerializeField]
+    private Button m_EndTurnButton;
+    [SerializeField]
     private TextMeshProUGUI m_ActionPointsText;
 
     protected override void OnEnable()

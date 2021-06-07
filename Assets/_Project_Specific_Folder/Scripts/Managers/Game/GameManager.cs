@@ -69,7 +69,7 @@ namespace BrokenMugStudioSDK
         public override void ResetGame()
         {
             base.ResetGame();
-
+            
         }
 
 

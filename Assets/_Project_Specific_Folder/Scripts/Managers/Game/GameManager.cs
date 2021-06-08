@@ -8,11 +8,12 @@ namespace BrokenMugStudioSDK
     public class GameManager : GameManagerBase
     {
         public static event LevelEvent OnDiceRoll = delegate { };
+        public static event LevelEvent OnTurnEnds = delegate { };
 
         private GameObject m_CurrentLevelInstance;
         [ReadOnly]
         public Level CurrentLevel;
-
+        public bool WinCondition = false;
         public int CurrentPlayerIndex;
 
         protected override void OnAwakeEvent()
@@ -94,7 +95,30 @@ namespace BrokenMugStudioSDK
                 OnDiceRoll?.Invoke();
             }
         }
+        public void EndTurn()
+        {
+            SwitchPlayerIndex();
+            if(OnTurnEnds!=null)
+            {
+                OnTurnEnds?.Invoke();
+            }
+        }
+        public void SwitchPlayerIndex()
+        {
+            switch (CurrentPlayerIndex)
+            {
+                case 0:
+                    CurrentPlayerIndex = 1;
+                    break;
+                case 1:
+                    CurrentPlayerIndex = 0;
+                    break;
+                default:
+                    Debug.Log("Current Player index not accounted for");
+                    break;
+            }
+        }
 
-        
+
     }
 }

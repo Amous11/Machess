@@ -525,7 +525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HideOnReset: 1
   m_RollDiceButton: {fileID: 816334254}
-  m_EndTurnButton: {fileID: 0}
+  m_EndTurnButton: {fileID: 1176376341726954501}
   m_ActionPointsText: {fileID: 1594409693751985716}
 --- !u!1 &7993052516893920130
 GameObject:

@@ -19,13 +19,14 @@ public class Screen_InGame : MenuScreenBase
         base.OnEnable();
        
         m_RollDiceButton.onClick.AddListener(RollDice);
+        m_EndTurnButton.onClick.AddListener(EndTurn);
 
     }
     protected override void OnDisable()
     {
         base.OnDisable();
         m_RollDiceButton.RemoveListener(RollDice);
-        
+        m_EndTurnButton.RemoveListener(EndTurn);
     }
 
     public void RollDice()
@@ -34,9 +35,21 @@ public class Screen_InGame : MenuScreenBase
         m_RollDiceButton.gameObject.SetActive(false);
     }
 
+    public void ResetDice()
+    {
+        m_RollDiceButton.gameObject.SetActive(true);
+        Dice.Instance.gameObject.SetActive(true);
+    }
+
     public void UpdateActionPoints(int i_ActionPoints)
     {
         m_ActionPointsText.text = i_ActionPoints.ToString();
+    }
+
+    public void EndTurn()
+    {
+        GameManager.Instance.EndTurn();
+        ResetDice();
     }
     
 }

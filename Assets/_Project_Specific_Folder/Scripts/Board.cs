@@ -1,3 +1,4 @@
+using BrokenMugStudioSDK;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,15 @@ public class Board : MonoBehaviour
 {
     [SerializeField]
     private Row[] m_Rows;
+    private void OnEnable()
+    {
+        GameManager.OnTurnEnds += SelectionChanged;
+    }
+    private void OnDisable()
+    {
+        GameManager.OnTurnEnds -= SelectionChanged;
+
+    }
     public Tile GetPositionTile(Vector3Int i_Position)
     {
         if(i_Position.z>=0 && i_Position.z<m_Rows.Length)

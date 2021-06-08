@@ -45,19 +45,15 @@ public class Player : PlayerBase
             Debug.DrawRay(m_Camera.transform.position, ray.direction * hit.distance, Color.red);
 
             if((hit.collider.gameObject.CompareTag(eTags.Tile.ToString())))
-            { 
+            {
                 MovePiece(hit.collider.GetComponent<Tile>());
             }
             else if ((hit.collider.gameObject.CompareTag(eTags.Piece.ToString())))
             {
                 SelectPiece(hit.collider.gameObject.GetComponent<Piece>());
             }
-
         }
        
-    }   
-
-    
-
+    }
     
 }

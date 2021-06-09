@@ -1,7 +1,17 @@
 public enum eItemType 
 {
-   Outfit,
-   Head,
-   Weapon,
-   Upgrade
+    Belts,
+    Clothes,
+    Crown,
+    Face,
+    Gloves,
+    Hair,
+    Hat,
+    Helmet,
+    Shoes,
+    ShoulderPads,
+    RightHand,
+    LeftHand,
+    Back
+    
 }

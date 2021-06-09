@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    public int PlayerIndex; 
     public ePieceTypes Type;
     [SerializeField]
     private Board m_Board;
@@ -17,6 +18,8 @@ public class Piece : MonoBehaviour
     private List<Vector3Int> m_PossibleMoves;
     [SerializeField]
     private LayerMask m_TileLayer;
+    [SerializeField]
+    private Skin m_Skin;
     private void OnEnable()
     {
         SetCurrentTile();
@@ -33,6 +36,13 @@ public class Piece : MonoBehaviour
         }
         
     }
+
+    public void SetSkin(int i_PlayerIndex)
+    {
+        PlayerIndex = i_PlayerIndex;
+        m_Skin.SetSkin(Type, i_PlayerIndex);
+    }
+
     public void Move(Tile i_TilePosition,int i_Range)
     {
         Debug.Log("Move X");

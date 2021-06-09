@@ -2741,6 +2741,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1819668102}
     m_Modifications:
+    - target: {fileID: 4050509272336446538, guid: 2dec48388d079f64fba0c0adc8742b38, type: 3}
+      propertyPath: SkinID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5807418284594577008, guid: 2dec48388d079f64fba0c0adc8742b38, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -9605,6 +9609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1819668102}
     m_Modifications:
+    - target: {fileID: 4050509272336446538, guid: 2dec48388d079f64fba0c0adc8742b38, type: 3}
+      propertyPath: SkinID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5807418284594577008, guid: 2dec48388d079f64fba0c0adc8742b38, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -10817,6 +10825,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 280236697}
     m_Modifications:
+    - target: {fileID: 4050509272336446538, guid: 2dec48388d079f64fba0c0adc8742b38, type: 3}
+      propertyPath: SkinID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5807418284594577008, guid: 2dec48388d079f64fba0c0adc8742b38, type: 3}
       propertyPath: m_Layer
       value: 10

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PolyArtMaskTint
+  m_Name: Player1_Material
   m_Shader: {fileID: 4800000, guid: f6f5585657a47374181de5ea8c44320e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5

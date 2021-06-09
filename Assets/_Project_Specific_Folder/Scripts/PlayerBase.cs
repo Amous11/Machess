@@ -19,6 +19,10 @@ public class PlayerBase : MonoBehaviour
     public virtual void OnEnable()
     {
         GameManager.OnDiceRoll += RollDice;
+        for(int i=0;i< m_Pieces.Length;i++)
+        {
+            m_Pieces[i].SetSkin(PlayerIndex);
+        }
     }
     public virtual void OnDisable()
     {

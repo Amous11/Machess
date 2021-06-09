@@ -19,7 +19,42 @@ namespace BrokenMugStudioSDK
         public CameraVariablesEditor Camera = new CameraVariablesEditor();
         public TweenVariablesEditor Tweens = new TweenVariablesEditor();
         public MenuVariablesEditor Menus = new MenuVariablesEditor();
+        public SkinsVariablesEditor Skins = new SkinsVariablesEditor();
+
         public ShopVariablesEditor Shop = new ShopVariablesEditor();
+
+       
+    }
+    [Serializable]
+    public class SkinsVariablesEditor
+    {
+        public PieceTypeSkin[] SkinSettings;
+        public PieceTypeSkin GetSkinSettings(ePieceTypes i_PieceType)
+        {
+            for(int i=0;i< SkinSettings.Length;i++)
+            {
+                if(i_PieceType== SkinSettings[i].PieceType)
+                {
+                    return SkinSettings[i];
+                }
+                
+            }
+            return null;
+        }
+        public Material[] PlayersMaterials;
+    }
+    [Serializable]
+    public class PieceTypeSkin
+    {
+        public ePieceTypes PieceType;
+        public SkinSet[] Skin;
+    }
+
+    [Serializable]
+    public class SkinSet
+    {
+        public eItemType Type;
+        public int Index = -1;
 
     }
 

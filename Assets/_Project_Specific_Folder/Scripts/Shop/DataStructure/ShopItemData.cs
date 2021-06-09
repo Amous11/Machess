@@ -135,8 +135,8 @@ namespace BrokenMugStudioSDK.Shop
 
         public Color InEditorColorType()
         {
-
-            switch (ItemType)
+            return Color.yellow;
+            /*switch (ItemType)
             {
                 case eItemType.Outfit: return Color.yellow;
                 case eItemType.Head: return Color.cyan;
@@ -144,7 +144,7 @@ namespace BrokenMugStudioSDK.Shop
                 case eItemType.Upgrade: return Color.green;
 
                 default: return Color.gray;
-            }
+            }*/
 
 
         }

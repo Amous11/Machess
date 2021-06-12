@@ -13,6 +13,7 @@ public class Screen_InGame : MenuScreenBase
     private Button m_EndTurnButton;
     [SerializeField]
     private TextMeshProUGUI m_ActionPointsText;
+    private bool m_CanClickRoll = true;
 
     protected override void OnEnable()
     {
@@ -31,14 +32,22 @@ public class Screen_InGame : MenuScreenBase
 
     public void RollDice()
     {
-        GameManager.Instance.RollDice();
-        m_RollDiceButton.gameObject.SetActive(false);
+        if (m_CanClickRoll)
+        {
+            m_CanClickRoll = false;
+            GameManager.Instance.RollDice();
+        }
     }
 
     public void ResetDice()
     {
-        m_RollDiceButton.gameObject.SetActive(true);
-        Dice.Instance.gameObject.SetActive(true);
+        if (!m_CanClickRoll)
+        {
+            m_CanClickRoll = true;
+            m_RollDiceButton.gameObject.SetActive(true);
+            Dice.Instance.gameObject.SetActive(true);
+        }
+        
     }
 
     public void UpdateActionPoints(int i_ActionPoints)

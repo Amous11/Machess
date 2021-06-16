@@ -31,7 +31,7 @@ public class Dice : Singleton<Dice>
     {
         if(m_IsThrown)
         {
-            if((m_Rigidbody.angularVelocity+m_Rigidbody.velocity).sqrMagnitude<.5f)
+            if((m_Rigidbody.angularVelocity+m_Rigidbody.velocity).sqrMagnitude == 0f)
             {
                 StopDice();
             }

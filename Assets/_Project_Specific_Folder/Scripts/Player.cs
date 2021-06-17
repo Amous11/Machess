@@ -43,8 +43,8 @@ public class Player : PlayerBase
         if (Physics.Raycast(ray, out hit,Mathf.Infinity, m_Layer))
         {
             Debug.DrawRay(m_Camera.transform.position, ray.direction * hit.distance, Color.red);
-
-            if((hit.collider.gameObject.CompareTag(eTags.Tile.ToString())))
+            Debug.LogError("Hit => "+hit.collider.gameObject.name+"/ tag="+ hit.collider.gameObject.tag);
+            if ((hit.collider.gameObject.CompareTag(eTags.Tile.ToString())))
             {
                 MovePiece(hit.collider.GetComponent<Tile>());
             }

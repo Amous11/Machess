@@ -87,11 +87,14 @@ namespace BrokenMugStudioSDK
     [Serializable]
     public class GamePlayVariablesEditor : GamePlayVariablesEditorBase
     {
+        public float RoundDurration = 60;
         public int ActionPointsCap = 9;
-
         public int BonusPerKillMoney = 10;
         public DiceSettings DiceSettings;
         public PieceData[] PieceSettings;
+        public float MoveTime = 1f;
+        public float RunSpeed = .4f;
+        public Color[] PlayerColors;
         public PieceData GetPieceData(ePieceTypes i_Type)
         {
             for(int i=0;i< PieceSettings.Length;i++)

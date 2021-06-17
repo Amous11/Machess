@@ -19,14 +19,16 @@ public class PlayerBase : MonoBehaviour
     public virtual void OnEnable()
     {
         GameManager.OnDiceRoll += RollDice;
+        GameManager.OnTurnEnds += OnTurnEnds;
         for(int i=0;i< m_Pieces.Length;i++)
         {
-            m_Pieces[i].SetSkin(PlayerIndex);
+            m_Pieces[i].SetSkin(this);
         }
     }
     public virtual void OnDisable()
     {
         GameManager.OnDiceRoll -= RollDice;
+        GameManager.OnTurnEnds -= OnTurnEnds;
 
     }
     public void RollDice()
@@ -35,6 +37,14 @@ public class PlayerBase : MonoBehaviour
         {
             Dice.OnDiceStopped += DiceRolled;
             Dice.Instance.ThrowDice();
+        }
+    }
+    public void OnTurnEnds()
+    {
+        if (IsMyTurn)
+        {
+            MenuManager.Instance.GetInGameScreen().UpdateActionPoints(ActionPoints);
+
         }
     }
 
@@ -65,32 +75,36 @@ public class PlayerBase : MonoBehaviour
         
         if ((null != m_SelectedPiece) && (m_SelectedPiece.TargetPositionIsValid(i_SelectedPiece.CurrentTile, m_Range)))
         {
-            MovePiece(i_SelectedPiece.CurrentTile);
-            Destroy(i_SelectedPiece.gameObject);
-            m_KillCount++;
-            CheckNumberOfEnemyPieces();
+            MovePiece(i_SelectedPiece.CurrentTile, i_SelectedPiece);
         }   
     }
 
-    public void MovePiece(Tile i_TargetPostion)
+    public void KilledEnemyPiece()
+    {
+        m_KillCount++;
+        CheckNumberOfEnemyPieces();
+    }
+    public void MovePiece(Tile i_TargetPostion,Piece i_PieceToKill=null)
     {
         if(m_SelectedPiece==null)
         {
+            Debug.LogError("Selected Piece Is NULL");
             return;
         }
 
-        if (m_SelectedPiece.TargetPositionIsValid(i_TargetPostion, m_Range) && (Dice.Instance.gameObject.IsActive() == false))
+        if (m_SelectedPiece.TargetPositionIsValid(i_TargetPostion, m_Range) && (Dice.Instance.HasRolledDice == true))
         {
             Debug.Log("Move");
             int usedPoints = Mathf.Abs(m_SelectedPiece.CalculateUsedActionPoints(m_SelectedPiece.CurrentTile, i_TargetPostion));
             SetActionPoints(-usedPoints);
-            m_SelectedPiece.Move(i_TargetPostion, m_Range);
+            m_SelectedPiece.Move(i_TargetPostion, m_Range, i_PieceToKill);
             SelectPiece(m_SelectedPiece);
         }
         else
         {
             m_SelectedPiece.Selected(0);
         }
+        GameManager.Instance.PlayerMoved();
            
     }
 

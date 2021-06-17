@@ -1843,6 +1843,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7188924318045584519}
     m_Modifications:
+    - target: {fileID: 320391102714406257, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 320391102714406257, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 364471697406276061, guid: b8cd9ae830c8a514bb377c64c282b35d, type: 3}
       propertyPath: m_Name
       value: Screen_Welcome

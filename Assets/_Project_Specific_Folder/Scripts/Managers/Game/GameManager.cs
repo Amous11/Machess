@@ -9,12 +9,14 @@ namespace BrokenMugStudioSDK
     {
         public static event LevelEvent OnDiceRoll = delegate { };
         public static event LevelEvent OnTurnEnds = delegate { };
+        public static event LevelEvent OnPlayerMoved = delegate { };
 
         private GameObject m_CurrentLevelInstance;
         [ReadOnly]
         public Level CurrentLevel;
         public bool WinCondition = false;
         public int CurrentPlayerIndex;
+        public PlayerBase[] Players;
 
         protected override void OnAwakeEvent()
         {
@@ -101,6 +103,13 @@ namespace BrokenMugStudioSDK
             if(OnTurnEnds!=null)
             {
                 OnTurnEnds?.Invoke();
+            }
+        }
+        public void PlayerMoved()
+        {
+            if (OnPlayerMoved != null)
+            {
+                OnPlayerMoved?.Invoke();
             }
         }
         public void SwitchPlayerIndex()

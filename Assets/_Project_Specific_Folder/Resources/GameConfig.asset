@@ -19,11 +19,12 @@ MonoBehaviour:
     InputThreshold: 0.1
   GamePlay:
     LevelCompleteMoneyReward: 90
+    RoundDurration: 30
     ActionPointsCap: 9
     BonusPerKillMoney: 10
     DiceSettings:
-      ThrowVelocity: 100
-      ThrowAngularVelocity: 100
+      ThrowVelocity: 50
+      ThrowAngularVelocity: 20
     PieceSettings:
     - Type: 0
       Moves:
@@ -47,6 +48,11 @@ MonoBehaviour:
       - {x: -1, y: 0, z: -1}
       - {x: -1, y: 0, z: 1}
       - {x: 1, y: 0, z: -1}
+    MoveTime: 1
+    RunSpeed: 0.4
+    PlayerColors:
+    - {r: 0.28773582, g: 0.346393, b: 1, a: 1}
+    - {r: 1, g: 0.28627455, b: 0.30723858, a: 1}
   Levels:
     Levels: []
   HUD:

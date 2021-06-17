@@ -8,21 +8,59 @@ using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
+    private PlayerBase m_Player;
+    public bool IsPlayerTurn { get { return PlayerIndex == GameManager.Instance.CurrentPlayerIndex; } }
+
+    public bool IsDead;
     public int PlayerIndex; 
     public ePieceTypes Type;
     [SerializeField]
     private Board m_Board;
     public Tile CurrentTile;
-    public PieceData m_Settings { get => GameConfig.Instance.GamePlay.GetPieceData(Type); }
+    private PieceData m_Settings { get => GameConfig.Instance.GamePlay.GetPieceData(Type); }
+    private GamePlayVariablesEditor m_GamePlay { get => GameConfig.Instance.GamePlay; }
+    [SerializeField]
+    private Collider m_Collider;
     [ShowInInspector]
     private List<Vector3Int> m_PossibleMoves;
     [SerializeField]
     private LayerMask m_TileLayer;
     [SerializeField]
     private Skin m_Skin;
+    [SerializeField]
+    private Animator m_CharacterAnimator;
+    private Piece m_TargetPiece;
+    [SerializeField]
+    private GameObject m_PiecesHighlight;
+    [SerializeField]
+    private FxColorSetter m_FxColorSetter;
+    [SerializeField]
+    private ParticleSystem m_DeathFX;
     private void OnEnable()
     {
         SetCurrentTile();
+        GameManager.OnTurnEnds += OnTurnEnds;
+    }
+    private void OnDisable()
+    {
+        GameManager.OnTurnEnds -= OnTurnEnds;
+
+    }
+    public void OnTurnEnds()
+    {
+        if(IsPlayerTurn)
+        {
+            if(m_PiecesHighlight!=null)
+            {
+                m_PiecesHighlight.SetActive(true);
+            }
+        }else
+        {
+            if (m_PiecesHighlight != null)
+            {
+                m_PiecesHighlight.SetActive(false);
+            }
+        }
     }
     public void SetCurrentTile()
     {
@@ -37,24 +75,79 @@ public class Piece : MonoBehaviour
         
     }
 
-    public void SetSkin(int i_PlayerIndex)
+    public void SetSkin(PlayerBase i_Player)
     {
-        PlayerIndex = i_PlayerIndex;
-        m_Skin.SetSkin(Type, i_PlayerIndex);
+        m_Player = i_Player;
+        PlayerIndex = i_Player.PlayerIndex;
+        m_Skin.SetSkin(Type, PlayerIndex);
+        m_FxColorSetter.SetColor(GameConfig.Instance.GamePlay.PlayerColors[PlayerIndex]);
+        OnTurnEnds();
+
     }
 
-    public void Move(Tile i_TilePosition,int i_Range)
+    public void Move(Tile i_TilePosition,int i_Range,Piece i_PieceToKill)
     {
         Debug.Log("Move X");
-
+        m_TargetPiece = i_PieceToKill;
         if (TargetPositionIsValid(i_TilePosition, i_Range))
         {
             Debug.Log("Move >TargetPositionIsValid X");
             CurrentTile = i_TilePosition;
-            transform.DOMove(i_TilePosition.transform.position, .5f);
+            Vector3 targetPosition = Vector3.zero;
+            if(m_TargetPiece!=null)
+            {
+                targetPosition = i_TilePosition.transform.position + m_TargetPiece.transform.forward;
+
+            }else
+            {
+                targetPosition = i_TilePosition.transform.position ;
+
+            }
+            transform.DOLookAt(targetPosition, .1f);
+            transform.DOMove(targetPosition, m_GamePlay.MoveTime).OnComplete(OnMoveComplete);
+
             m_Board.SelectionChanged(); //highlights tiles
+            float speed = Vector3.Distance(targetPosition, transform.position)* m_GamePlay.RunSpeed;
+            m_CharacterAnimator.SetBool(eAnimator.Run.ToString(), true);
+            m_CharacterAnimator.SetFloat(eAnimator.RunSpeed.ToString(), speed);
 
         }
+    }
+    public void OnMoveComplete()
+    {
+        m_CharacterAnimator.SetBool(eAnimator.Run.ToString(), false);
+        if(m_TargetPiece!=null)
+        {
+            transform.DOLookAt(m_TargetPiece.transform.position, .1f);
+
+            m_CharacterAnimator.SetTrigger(eAnimator.Attack.ToString());
+            m_Player.KilledEnemyPiece();
+            m_TargetPiece.Die();
+            transform.DOMove(m_TargetPiece.CurrentTile.transform.position, m_GamePlay.MoveTime).SetDelay(1);
+
+        }
+
+    }
+    public void Die()
+    {
+        IsDead = true;
+        m_CharacterAnimator.SetTrigger(eAnimator.Die.ToString());
+        m_Collider.enabled = false;
+        Invoke(nameof(DeathFx), .5f);
+    }
+    public void DeathFx()
+    {
+        transform.GetChild(0).DOScale(Vector3.zero, .25f).SetEase(Ease.OutQuad);
+        if(m_DeathFX!=null)
+        {
+            m_DeathFX.Play();
+        }
+        Invoke(nameof(HidePiece), 2.5f);
+
+    }
+    public void HidePiece()
+    {
+        gameObject.SetActive(false);
     }
     public bool TargetPositionIsValid(Tile i_TilePosition, int i_Range)
     {
@@ -63,7 +156,6 @@ public class Piece : MonoBehaviour
 
     public void Selected(int i_Range)
     {
-        Debug.Log("Se");
         m_Board.SelectionChanged();
 
         m_PossibleMoves = new List<Vector3Int>();

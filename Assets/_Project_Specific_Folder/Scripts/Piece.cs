@@ -77,6 +77,7 @@ public class Piece : MonoBehaviour
 
     public void SetSkin(PlayerBase i_Player)
     {
+        Debug.Log("SetSkinCalled => " + i_Player.gameObject.name+ gameObject.name);
         m_Player = i_Player;
         PlayerIndex = i_Player.PlayerIndex;
         m_Skin.SetSkin(Type, PlayerIndex);

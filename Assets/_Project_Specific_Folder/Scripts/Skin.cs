@@ -13,7 +13,7 @@ public class Skin : MonoBehaviour
     private PieceTypeSkin m_Settings;
     private void OnEnable()
     {
-        DisableAll();
+        //DisableAll();
     }
     public void DisableAll()
     {

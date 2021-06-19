@@ -54,7 +54,8 @@ MonoBehaviour:
     - {r: 0.28773582, g: 0.346393, b: 1, a: 1}
     - {r: 1, g: 0.28627455, b: 0.30723858, a: 1}
   Levels:
-    Levels: []
+    Levels:
+    - {fileID: 9154097827148903697, guid: d4bd1369f18f8ed48be714ae7008f878, type: 3}
   HUD:
     CoinUIAnimData:
       AmountCoins: 7

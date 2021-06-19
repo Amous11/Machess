@@ -25,13 +25,13 @@ MonoBehaviour:
     OpenOnFinish: 1
     IsScreenShotMode: 0
     Camera: {fileID: 0}
-    ScreenWidth: 1920
-    ScreenHeight: 1080
+    ScreenWidth: 2560
+    ScreenHeight: 1440
     SeperateToResolutionFolders: 1
   BuildSettings:
     IsDeveloperMode: 1
-    IsAppBundle: 1
-    BuildOptionAndroid: 0
+    IsAppBundle: 0
+    BuildOptionAndroid: 780
     KeyStoreName: BMS
     KeyStorePass: BMS!123
     KeyaliasName: bms_key

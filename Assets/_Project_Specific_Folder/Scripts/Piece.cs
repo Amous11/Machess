@@ -137,7 +137,7 @@ public class Piece : MonoBehaviour
     }
     public void DeathFx()
     {
-        transform.GetChild(0).DOScale(Vector3.zero, .25f).SetEase(Ease.OutQuad);
+        //transform.GetChild(0).DOScale(Vector3.zero, .25f).SetEase(Ease.OutQuad);
         if(m_DeathFX!=null)
         {
             m_DeathFX.Play();

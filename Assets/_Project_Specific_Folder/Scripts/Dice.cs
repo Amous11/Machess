@@ -39,9 +39,7 @@ public class Dice : Singleton<Dice>
         HasRolledDice = false;
 
     }
-#if UNITY_EDITOR
-    [Button]
-#endif
+
     public void ThrowDice()
     {
         m_IsThrown = true;

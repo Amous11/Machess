@@ -13,6 +13,18 @@ public class Screen_InGame : MenuScreenBase
     [SerializeField]
     private Button m_EndTurnButton;
     [SerializeField]
+    private Button m_MenuButton;
+    [SerializeField]
+    private Button m_MenuButton2;
+    [SerializeField]
+    private Button m_ExitButton;
+    [SerializeField]
+    private GameObject m_MenuGO;
+    [SerializeField] 
+    private Slider m_VolumeSlider;
+    [SerializeField] 
+    private GameObject m_WinPanel;
+    [SerializeField]
     private TextMeshProUGUI m_ActionPointsText;
     private bool m_CanClickRoll = true;
     [SerializeField]
@@ -26,6 +38,10 @@ public class Screen_InGame : MenuScreenBase
        
         m_RollDiceButton.onClick.AddListener(RollDice);
         m_EndTurnButton.onClick.AddListener(EndTurn);
+        m_MenuButton.onClick.AddListener(BringMenu);
+        m_MenuButton2.onClick.AddListener(BringMenu);
+        m_ExitButton.onClick.AddListener(ExitGame);
+        m_VolumeSlider.onValueChanged.AddListener(ChangeVolume);
         OnTurnEnds();
         GameManager.OnTurnEnds += OnTurnEnds;
 
@@ -35,9 +51,34 @@ public class Screen_InGame : MenuScreenBase
         base.OnDisable();
         m_RollDiceButton.RemoveListener(RollDice);
         m_EndTurnButton.RemoveListener(EndTurn);
+        m_MenuButton.onClick.RemoveListener(BringMenu);
+        m_MenuButton2.onClick.RemoveListener(BringMenu);
+        m_ExitButton.onClick.RemoveListener(ExitGame);
         GameManager.OnTurnEnds -= OnTurnEnds;
 
     }
+    public void BringMenu()
+    {
+        if (m_MenuGO.IsActive())
+        {
+            m_MenuGO.SetActive(false);
+        }
+        else
+        {
+            m_MenuGO.SetActive(true);
+        }
+            
+    }
+
+    public void ExitGame()
+    {
+        GameManager.Instance.ResetGame();
+    }
+    public void ChangeVolume(float i_Value)
+    {
+        AudioListener.volume = i_Value;
+    }
+
     public void OnTurnEnds()
     {
         ResetTimer();
@@ -91,6 +132,11 @@ public class Screen_InGame : MenuScreenBase
     {
         GameManager.Instance.EndTurn();
         ResetDice();
+    }
+
+    public void VictoryPanel()
+    {
+
     }
     
 }

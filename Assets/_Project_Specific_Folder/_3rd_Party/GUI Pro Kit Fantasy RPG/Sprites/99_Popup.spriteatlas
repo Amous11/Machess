@@ -70,7 +70,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: d19724e297461444a88f7bbb61aa4934, type: 3}
   - {fileID: 4965702589195753682, guid: 435f2db4d17224ffeb9d28d98b001822, type: 3}
   - {fileID: 21300000, guid: 9969b146d9aec445d826739007e3424c, type: 3}
-  - {fileID: 6114881062073981623, guid: 1f6ecbb7b97344026b5277644ad2ca95, type: 3}
+  - {fileID: 21300000, guid: 1f6ecbb7b97344026b5277644ad2ca95, type: 3}
   - {fileID: 21300000, guid: 4990d2d8739754d3db79fc681354aad9, type: 3}
   - {fileID: 21300000, guid: 8ddb9369782c54cdc814044ad3dddcf1, type: 3}
   - {fileID: -7033240994483071447, guid: a47b971a0fb5347429a6dacfdbea0858, type: 3}
@@ -91,7 +91,7 @@ SpriteAtlas:
   - common_popup_btn_close_bg
   - textfield_disable_0
   - common_popup_bg_top
-  - common_popup_0
+  - common_popup
   - common_popup_bg
   - textfield_icon_error
   - textfield_error_0

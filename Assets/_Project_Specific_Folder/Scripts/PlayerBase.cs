@@ -118,6 +118,7 @@ public class PlayerBase : MonoBehaviour
         if (m_KillCount >= m_InitialPiecesCount)
         {
             GameManager.Instance.WinCondition = true;
+            GameManager.Instance.LevelCompleted();
         }
     }
 

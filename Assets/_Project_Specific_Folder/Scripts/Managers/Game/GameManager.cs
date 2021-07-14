@@ -10,6 +10,7 @@ namespace BrokenMugStudioSDK
         public static event LevelEvent OnDiceRoll = delegate { };
         public static event LevelEvent OnTurnEnds = delegate { };
         public static event LevelEvent OnPlayerMoved = delegate { };
+        public static event LevelEvent OnWinCondition = delegate { };
 
         private GameObject m_CurrentLevelInstance;
         [ReadOnly]
@@ -71,8 +72,7 @@ namespace BrokenMugStudioSDK
 
         public override void ResetGame()
         {
-            base.ResetGame();
-            
+            base.ResetGame();            
         }
 
 
@@ -127,7 +127,6 @@ namespace BrokenMugStudioSDK
                     break;
             }
         }
-
 
     }
 }

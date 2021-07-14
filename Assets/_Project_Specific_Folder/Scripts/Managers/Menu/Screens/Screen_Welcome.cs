@@ -10,7 +10,6 @@ public class Screen_Welcome : MenuScreenBase
     [SerializeField] private Button m_TapToStart;
     [SerializeField] private Button m_ShopButton;
 
-
     [Button]
     private void SetRefs()
     {
@@ -45,7 +44,6 @@ public class Screen_Welcome : MenuScreenBase
         MenuManager.Instance.OpenShopScreen();
     }
 
-   
     private void OnTapToStart()
     {
         Debug.Log(nameof(OnTapToStart));

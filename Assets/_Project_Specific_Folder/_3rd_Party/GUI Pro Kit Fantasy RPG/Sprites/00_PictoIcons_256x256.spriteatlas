@@ -56,7 +56,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: e2973d3c447e84242b3427037c52ef92, type: 3}
-    totalSpriteSurfaceArea: 23658496
+    totalSpriteSurfaceArea: 23603985
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -129,7 +129,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e263bec2fa971467cab198200ea61a12, type: 3}
   - {fileID: 21300000, guid: 10f1a0d2a42f748ff9f14db99d14105f, type: 3}
   - {fileID: 21300000, guid: 501d01d2e41ab4856b33673e3e474c3d, type: 3}
-  - {fileID: 21300000, guid: b23512e25a0964de79863e6560d3e0c4, type: 3}
+  - {fileID: -5443588118485287577, guid: b23512e25a0964de79863e6560d3e0c4, type: 3}
   - {fileID: 21300000, guid: cf747ce2bffac498a8754e237021ea5c, type: 3}
   - {fileID: 21300000, guid: 6c373cf243a1d4d75892a2d143da4c76, type: 3}
   - {fileID: 21300000, guid: a05e4903394574641bd498a4d4f90f7d, type: 3}
@@ -491,7 +491,7 @@ SpriteAtlas:
   - btn_icon_map
   - btn_icon_file_import
   - btn_icon_menu_2
-  - btn_icon_clear
+  - btn_icon_clear_0
   - btn_icon_moneybag_dollar
   - btn_icon_chess_4
   - btn_icon_talk_1

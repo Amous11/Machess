@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 0_Default
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 2b396fc01f72b4543abfea5f5bb0cbf8, type: 3}
+    totalSpriteSurfaceArea: 423133
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 14078e3008747234dbea7b7aa6acf5a4, type: 3}
+  - {fileID: 21300000, guid: 398026717ec301c4aad261ffa3c7b78e, type: 3}
+  - {fileID: 21300000, guid: 23d2f9d15f15a43c5bf2c57de1a27879, type: 3}
+  - {fileID: 21300000, guid: f173835283b4a89448894f69e7de3089, type: 3}
+  - {fileID: 21300000, guid: 362cdbc283a1c43a7abec33080b04398, type: 3}
+  - {fileID: 21300000, guid: 391584432233c4e0a864435a50a098c5, type: 3}
+  - {fileID: 21300000, guid: 86ad28a37b0134b33b88df67b42b7fe0, type: 3}
+  - {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
+  - {fileID: 21300000, guid: f87d9d25262734d879c2da72faf95bf2, type: 3}
+  - {fileID: 21300000, guid: 2bc701b63b63f40e0893a9fabeaa0a78, type: 3}
+  - {fileID: 21300000, guid: 535d5068f6e6f4174a907fe1688dc8c1, type: 3}
+  - {fileID: 21300000, guid: 660e8d5a5ebcc8741854d1d651f44420, type: 3}
+  - {fileID: 21300000, guid: c7f41eda441f486429cbd2d28aa5a10d, type: 3}
+  - {fileID: 21300000, guid: 0036322b5b88b4794b6e86458a3c81ce, type: 3}
+  - {fileID: 21300000, guid: f889dc3b78cc7db40a1aa1a0839276d0, type: 3}
+  - {fileID: 21300000, guid: b9d0300c581154c618942cb476c47985, type: 3}
+  - {fileID: 21300000, guid: 77f2fa5c779c34ab9ad50e39ebe0bacf, type: 3}
+  - {fileID: 21300000, guid: 8c8d231d5a64f0d49b99aae58bb3d9e4, type: 3}
+  - {fileID: 21300000, guid: d6deeaad1aa87a9449ad8ecef5a70ba5, type: 3}
+  - {fileID: 21300000, guid: 90dfa5fd06e284e4d96cb2a153275e3c, type: 3}
+  - {fileID: 21300000, guid: 6bbcba4e267be464998897741b81d508, type: 3}
+  - {fileID: 21300000, guid: 804461bef59b141dba258fc997c8ca15, type: 3}
+  - {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
+  - {fileID: 21300000, guid: 102bb1ef24b2a3342ab9f7bc06364eb4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - btn_Red
+  - Pixel
+  - button_gray
+  - rv_Icon_001
+  - button_sky
+  - btn_icon_ad
+  - button_purple
+  - button_green
+  - button_dark
+  - button_orange
+  - button_white
+  - pause_btn_red
+  - button_green_PRessed
+  - btn_action_blue
+  - button_purple_Pressed
+  - reward_icon_gold
+  - btn_action_yellow
+  - pause_btn_blue
+  - btn_Blue
+  - btn_Pink
+  - button_blue
+  - button_yellow
+  - button_red
+  - btn_Green
+  m_RenderDataMap: {}
+  m_Tag: 0_Default
+  m_IsVariant: 0

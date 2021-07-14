@@ -1,0 +1,240 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39fdb9bef7a3dfd47ad55ed56841a932, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  Debug:
+    m_EnableDebug: 1
+  Input:
+    DragSensitivity: {x: 1, y: 1}
+    InputThreshold: 0.1
+  GamePlay:
+    LevelCompleteMoneyReward: 90
+    RoundDurration: 30
+    ActionPointsCap: 9
+    BonusPerKillMoney: 10
+    DiceSettings:
+      ThrowVelocity: 50
+      ThrowAngularVelocity: 20
+    PieceSettings:
+    - Type: 0
+      Moves:
+      - {x: 1, y: 0, z: 0}
+      - {x: -1, y: 0, z: 0}
+      - {x: 0, y: 0, z: 1}
+      - {x: 0, y: 0, z: -1}
+    - Type: 1
+      Moves:
+      - {x: 1, y: 0, z: 0}
+      - {x: -1, y: 0, z: 0}
+      - {x: 0, y: 0, z: 1}
+      - {x: 0, y: 0, z: -1}
+      - {x: 1, y: 0, z: 1}
+      - {x: -1, y: 0, z: -1}
+      - {x: -1, y: 0, z: 1}
+      - {x: 1, y: 0, z: -1}
+    - Type: 2
+      Moves:
+      - {x: 1, y: 0, z: 1}
+      - {x: -1, y: 0, z: -1}
+      - {x: -1, y: 0, z: 1}
+      - {x: 1, y: 0, z: -1}
+    MoveTime: 1
+    RunSpeed: 0.4
+    PlayerColors:
+    - {r: 0.28773582, g: 0.346393, b: 1, a: 1}
+    - {r: 1, g: 0.28627455, b: 0.30723858, a: 1}
+  Levels:
+    Levels:
+    - {fileID: 9154097827148903697, guid: d4bd1369f18f8ed48be714ae7008f878, type: 3}
+  HUD:
+    CoinUIAnimData:
+      AmountCoins: 7
+      DelayBetweenCoins: 0.18
+      AnimData:
+        InitialSizeDeltaAmount: 185
+        InitialSizeDeltaDuration: 0.08
+        InitialSizeDeltaEase: 3
+        MoveOffset: {x: 0, y: 241, z: 0}
+        MoveDuration: 0.2
+        MoveEase: 3
+        FinalSizeDeltaAmount: 138.75
+        FinalSizeDeltaDuration: 0.17
+        FinalSizeDeltaEase: 3
+        FinalAnimData:
+          Duration: 0.15
+          Ease: 2
+          LoopCount: 0
+    HideLevelCompleteDelay: 0.5
+    ShowLevelCompleteDelay: 1
+    ShowLevelFailedDelay: 1
+    MainButtonJuice:
+      DownDurration: 0.25
+      ScaleDown: 0.85
+      DownEase: 23
+      DoVibrateDown: 1
+      UpShakeDurration: 0.25
+      UpResetDurration: 0.1
+      Strength: 0.5
+      Vibro: 2
+      Elasticity: 0.1
+      DoVibrateUp: 0
+      UpEase: 25
+  Camera:
+    CameraMouvements:
+      MouvementSpeed: 5
+      MouvementSpeedVectorMultiply: {x: 1, y: 1, z: 1}
+      DoLookAt: 0
+      LookAtOffset: {x: 0, y: 0, z: 0}
+      LookAtSpeed: 10
+      DoRotateWithTarget: 0
+      RotateWithTargetSpeed: 10
+    ZoomData:
+      ZoomSpeedIn: 2
+      ZoomSpeedOut: 5
+      MinZoom: -11.27
+      MaxZoom: -10
+    CameraPositions:
+      CameraPositions:
+      - GameState: 0
+        RotatorRotation: {x: 14, y: -222.42, z: 0}
+        HandPosition: {x: 0, y: 0, z: -4.7}
+        Delay: 0
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 1
+        RotatorRotation: {x: 42.5, y: 90, z: 0}
+        HandPosition: {x: 0, y: -0.27, z: -9.2}
+        Delay: 0.2
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 5
+        RotatorRotation: {x: 45, y: 180, z: 1}
+        HandPosition: {x: 0, y: 0, z: -7.5}
+        Delay: 0.2
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 2
+        RotatorRotation: {x: 28, y: 180, z: 0}
+        HandPosition: {x: 0, y: -2, z: 1}
+        Delay: 0
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 3
+        RotatorRotation: {x: 28, y: 180, z: 0}
+        HandPosition: {x: 0, y: 0, z: 0}
+        Delay: 0.3
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 4
+        RotatorRotation: {x: 28, y: 180, z: 0}
+        HandPosition: {x: 0, y: -2, z: 1}
+        Delay: 0.3
+        Durration: 0.5
+        EaseType: 3
+      - GameState: 6
+        RotatorRotation: {x: 0, y: 0, z: 0}
+        HandPosition: {x: 0, y: 0, z: 0}
+        Delay: 0.3
+        Durration: 0.5
+        EaseType: 3
+  Menus:
+    TimeToShowNoThanks: 1
+  Skins:
+    SkinSettings:
+    - PieceType: 0
+      Skin:
+      - Type: 7
+        Index: 5
+      - Type: 5
+        Index: -1
+      - Type: 3
+        Index: 2
+      - Type: 1
+        Index: 6
+      - Type: 4
+        Index: 4
+      - Type: 8
+        Index: 5
+      - Type: 10
+        Index: 2
+      - Type: 11
+        Index: -1
+      - Type: 12
+        Index: -1
+    - PieceType: 2
+      Skin:
+      - Type: 7
+        Index: 2
+      - Type: 5
+        Index: 3
+      - Type: 3
+        Index: 0
+      - Type: 9
+        Index: 0
+      - Type: 1
+        Index: 4
+      - Type: 4
+        Index: 5
+      - Type: 8
+        Index: 3
+      - Type: 10
+        Index: 7
+      - Type: 11
+        Index: 11
+    - PieceType: 1
+      Skin:
+      - Type: 6
+        Index: 1
+      - Type: 5
+        Index: 5
+      - Type: 3
+        Index: 1
+      - Type: 9
+        Index: 5
+      - Type: 1
+        Index: 3
+      - Type: 4
+        Index: 1
+      - Type: 0
+        Index: 1
+      - Type: 8
+        Index: 2
+      - Type: 10
+        Index: 9
+    PlayersMaterials:
+    - {fileID: 2100000, guid: 67ba5db7871968141908f7c263241b5c, type: 2}
+    - {fileID: 2100000, guid: cca7ea888c153b44e9e19c0b5972eb76, type: 2}
+  Shop:
+    ShopItemsLists:
+      ItemLists:
+        keyData: 00000000010000000200000003000000
+        valueData:
+        - {fileID: 11400000, guid: b24ce7238547bdd4299c75a709784b73, type: 2}
+        - {fileID: 11400000, guid: 1cdd9e1774981db4aab80e9064c7fff5, type: 2}
+        - {fileID: 11400000, guid: 3c363e75101dac14e854d863a0eac405, type: 2}
+        - {fileID: 11400000, guid: ca1ae149e10ae7146821cde158960f5d, type: 2}
+    RarityColors:
+      keyData: 00000000010000000200000003000000
+      valueData:
+      - BackgroundColor: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
+        TextColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 1}
+        SelectedTeint: {r: 1, g: 1, b: 1, a: 1}
+      - BackgroundColor: {r: 0.6770819, g: 0.6650944, b: 1, a: 1}
+        TextColor: {r: 0.14905654, g: 0.11792451, b: 1, a: 1}
+        SelectedTeint: {r: 1, g: 1, b: 1, a: 1}
+      - BackgroundColor: {r: 0.7805217, g: 0.504717, b: 1, a: 1}
+        TextColor: {r: 0.9037957, g: 0, b: 1, a: 1}
+        SelectedTeint: {r: 1, g: 1, b: 1, a: 1}
+      - BackgroundColor: {r: 1, g: 0.88645947, b: 0.5613208, a: 1}
+        TextColor: {r: 0.91115713, g: 1, b: 0, a: 1}
+        SelectedTeint: {r: 1, g: 0.8160377, b: 0.8160377, a: 1}
